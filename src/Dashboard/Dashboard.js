@@ -13,6 +13,7 @@ const Dashboard = ({setHeading}) => {
     return ( 
         <main>
             {/* <NavBar /> */}
+            <div className='spacer'></div>
             <BumpChart lineData={lineData}/>
             <LineChart />
         </main>
