@@ -1,0 +1,11 @@
+.main-heading {
+    height: 5rem;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 1rem;
+    color: var(--main-text-color)
+}
