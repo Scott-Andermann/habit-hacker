@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
-import './Dashboard.css';
+import './Profile.css';
 
-const Dashboard = ({setHeading}) => {
+const Profile = ({setHeading}) => {
     
     useEffect(() => {
-        setHeading('Dashboard')
+        setHeading('Profile')
     }, []);
 
     return ( 
@@ -14,4 +14,4 @@ const Dashboard = ({setHeading}) => {
      );
 }
  
-export default Dashboard;
+export default Profile;

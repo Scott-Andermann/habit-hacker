@@ -1,14 +1,14 @@
 * {
   font-family:'Comfortaa', Courier, monospace;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
 }
 
 :root {
   --main-bg-color: #355070;
   --main-text-color: #fcf3ee;
-  --hover-color: #e56b6f;
-  --button-color: #6d597a;
+  --hover-color: #eaac8b;
+  --button-color: #e56b6f;
   --icon-color: #d8d2ce;
   --menu-color: #6d597a;
 }

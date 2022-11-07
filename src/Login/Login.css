@@ -1,0 +1,116 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    color: white;
+    background-color: var(--menu-color);
+    border-radius: 3px 3px 0 0;
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    background-color: var(--main-bg-color);
+}
+
+.login-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 350px;
+    background-color: #6d597a78;
+    padding-bottom: 50px;
+    border-radius: 3px;
+}
+
+.login-form {
+    padding: 50px;
+    padding-bottom: 0px;
+}
+
+.input-label {
+    margin: auto;
+}
+
+.input-field {
+    margin: auto;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 250px;
+    height: 2rem;
+    border-radius: 3px;
+    border: 1px solid gray;
+    background-color: #6d597a78;
+    color: var(--main-text-color);
+}
+
+.input-field::placeholder {
+    color: var(--main-text-color);
+    opacity: .65;
+}
+
+.input-field:focus {
+    border: 2px solid gray;
+    background-color: #FBFFFE;
+    color: black;
+    outline: none;
+}
+
+.submit-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    /* margin-bottom: 2rem; */
+}
+
+.submit-button {
+    cursor: pointer;
+    width: 250px;
+    height: 2rem;
+    background-color: var(--button-color);
+    border: 1px solid var(--button-color);
+    border-radius: 3px;
+    color: var(--main-text-color);
+    transition: linear 0.15s;
+}
+
+.submit-button:hover {
+    background-color: var(--hover-color);
+}
+
+.submit-button:active {
+    background-color: rgb(106, 192, 185);
+}
+
+.alt-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    border-top: 1px solid gray;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.login-link {
+    color: #FBFFFE;
+    text-decoration: none;
+    text-align: center;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
