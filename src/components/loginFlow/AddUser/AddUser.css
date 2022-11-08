@@ -1,0 +1,38 @@
+.login-input {
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.valid {
+    border: 2px solid #40a141;
+}
+
+.invalid {
+    border: 2px solid #F24236;
+}
+
+.add-user-modal {
+    position: absolute;
+    /* background-color: #403233; */
+    color: #FBFFFE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 325px;
+    height: 180px;
+    padding: 1.5rem;
+    border-radius: 3px;
+    opacity: 0.8;
+}
+
+.return-wrapper {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.return-link {
+    font-size: 0.8rem;
+}

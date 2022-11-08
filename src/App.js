@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from './Login/Login';
-import Dashboard from './Dashboard/Dashboard';
+import Login from './components/loginFlow/Login/Login';
+import AddUser from './components/loginFlow/AddUser/AddUser';
+
+import Dashboard from './components/dashboardFlow/Dashboard/Dashboard';
 import Profile from './Profile/Profile';
-import AddActivity from './AddActivity/AddActivity';
+import AddActivity from './components/activityFlow/AddActivity/AddActivity';
 import Stats from './Stats/Stats';
 
 import NavBar from './NavBar/NavBar';
@@ -23,7 +25,11 @@ function App() {
   if (!isAuthenticated) {
     return (
       <BrowserRouter>
-        <Login />
+        {/* <Login /> */}
+        <Routes>
+          <Route path='/' element={<Login />}></Route>
+          <Route path='/create-account' element={<AddUser />}></Route>
+        </Routes>
       </BrowserRouter>
     );
   }
@@ -33,7 +39,7 @@ function App() {
         <div>
             <TitleBar heading={heading}/>
             <ProfileBar setModal={setModal}/>
-            <ProfileModal modal={modal}/>
+            {/* <ProfileModal modal={modal}/> */}
             <NavBar />
             <Routes>
                 <Route path='/' element={<Dashboard setHeading={setHeading}/>} />

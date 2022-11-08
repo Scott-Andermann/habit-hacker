@@ -9,6 +9,7 @@ const Login = ({ saveToken }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('this is a test');
         // need to hash the username and password before sending to protect users
         // const token = await loginUser({
         //     username: username, password: sha256(password)
@@ -35,7 +36,7 @@ const Login = ({ saveToken }) => {
                     </div>
                 </form>
                 <div className="alt-actions">
-                    <Link className='login-link' >Create new account</Link>
+                    <Link className='login-link' to='/create-account'>Create new account</Link>
                     <Link className='login-link' >Forgot password?</Link>
 
                 </div>
