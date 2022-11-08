@@ -12,8 +12,8 @@ const NavBar = () => {
     return (
         <nav>
             <Link className='nav-link' to='/dashboard'><FontAwesomeIcon icon={faHouse} size='2x' className='icon' /></Link>
-            <Link className='nav-link'><FontAwesomeIcon icon={faCircleInfo} size='2x' className='icon' /></Link>
-            <Link className='nav-link'><FontAwesomeIcon icon={faCirclePlus} size='2x' className='icon' /></Link>
+            <Link className='nav-link' to='/stats'><FontAwesomeIcon icon={faCircleInfo} size='2x' className='icon' /></Link>
+            <Link className='nav-link' to='/add_activity'><FontAwesomeIcon icon={faCirclePlus} size='2x' className='icon' /></Link>
             <Link className='nav-link' to='/profile'><FontAwesomeIcon icon={faUser} size='2x' className='icon' /></Link>
         </nav>
     );

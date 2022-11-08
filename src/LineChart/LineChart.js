@@ -23,7 +23,7 @@ const LineChart = ({ lineData /* see data tab */ }) => {
                             { x: 2, y: 11 },
                             { x: 3, y: 12 },
                             { x: 4, y: 13 },
-                            { x: 5, y: null },
+                            { x: 5, y: 15 },
                             { x: 6, y: 18 },
                             { x: 7, y: 16 },
                             { x: 8, y: 8 },
