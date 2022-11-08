@@ -1,0 +1,8 @@
+.activity-cards-wrapper {
+    /* width: 100%; */
+    min-height: 100px;
+    margin: 0 1rem;
+    background-color: var(--main-bg-color);
+    margin-top: 2rem;
+    padding-bottom: 6rem;
+}

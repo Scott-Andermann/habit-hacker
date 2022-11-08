@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import InputField from '../InputField/InputField';
+import TimeInput from '../TimeInput/TimeInput';
 import './AddActivity.css';
 
 const AddActivity = ({setHeading}) => {
@@ -8,13 +9,16 @@ const AddActivity = ({setHeading}) => {
     const [activityType, setActivityType] = useState('walk');
     const [description, setDescription] = useState('')
     const [link, setLink] = useState('');
-    const [duration, setDuration] = useState('');
-    const [distance, setDistance] = useState('');
+    const [duration, setDuration] = useState();
+    const [distance, setDistance] = useState();
 
     const handleSubmit = (e) => {
         e.preventDefault()
         // TODO: send this info to lamba in POST request and add to DB
-        const body = {title: title, date: date, description: description, link: link, duration: duration, distance: distance, activityType: activityType};
+        const timeString = new Date(date)
+
+        const body = {title: title, date: date, description: description, link: link, duration: Number(duration), distance: Number(distance), activityType: activityType};
+        console.log(body);
     }
 
     useEffect(() => {
@@ -39,7 +43,7 @@ const AddActivity = ({setHeading}) => {
                 </select>
                 <label className='input-label'>Activity Details</label>
                 <InputField placeholder='External Link' value={link} setValue={setLink} type='text'/>
-                <InputField placeholder='00:00:00' value={duration} setValue={setDuration} type='text'/>
+                <TimeInput setDuration={setDuration}/>
                 <InputField placeholder='0.00 mi' value={distance} setValue={setDistance} type='number'/>
                 <div className='submit-wrapper activity'>
                     <button className='submit-button activity' type='submit'>Save Activity</button>

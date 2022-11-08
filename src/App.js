@@ -5,9 +5,10 @@ import Login from './components/loginFlow/Login/Login';
 import AddUser from './components/loginFlow/AddUser/AddUser';
 
 import Dashboard from './components/dashboardFlow/Dashboard/Dashboard';
-import Profile from './Profile/Profile';
+import Profile from './components/profileFlow/Profile/Profile';
 import AddActivity from './components/activityFlow/AddActivity/AddActivity';
 import Stats from './Stats/Stats';
+import Activities from './components/activityListComponents/Activities/Activities';
 
 import NavBar from './NavBar/NavBar';
 import ProfileBar from './ProfileBar/ProfileBar';
@@ -47,6 +48,7 @@ function App() {
                 <Route path='/profile' element={<Profile setHeading={setHeading}/>} />
                 <Route path='/add_activity' element={<AddActivity setHeading={setHeading} />} />
                 <Route path='/stats' element={<Stats setHeading={setHeading} />} />
+                <Route path='/activities' element={<Activities setHeading={setHeading} />} />
             </Routes>
         </div>
     </BrowserRouter>

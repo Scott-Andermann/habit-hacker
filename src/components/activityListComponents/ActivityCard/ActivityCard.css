@@ -1,0 +1,7 @@
+.activity-card {
+    height: 15rem;
+    width: 100%;
+    background-color: var(--hover-color);
+    border-radius: 5px;
+    margin-top: 1rem;
+}
