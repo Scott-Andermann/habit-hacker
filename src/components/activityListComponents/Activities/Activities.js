@@ -23,7 +23,7 @@ const Activities = ({setHeading}) => {
         "date_field": "2022-10-06T00:00:00.000Z",
         "actType": "walk",
         "title": "walking around",
-        "actDescription": "great",
+        "actDescription": "great blah, blah ahaha hab akdlasj dklaj d,a lmdna,m",
         "duration": 24001,
         "mileage": 4,
         "points": 2,
@@ -36,6 +36,11 @@ const Activities = ({setHeading}) => {
             <div className='spacer'></div>
             <div className='activity-cards-wrapper'>
                 {activityData.length > 0 && activityData.map(element => <ActivityCard data={element} key={element.id}/>)}
+                <ActivityCard data={data}/>
+                <ActivityCard data={data}/>
+                <ActivityCard data={data}/>
+                <ActivityCard data={data}/>
+                <ActivityCard data={data}/>
                 <ActivityCard data={data}/>
                 <ActivityCard data={data}/>
                 <ActivityCard data={data}/>

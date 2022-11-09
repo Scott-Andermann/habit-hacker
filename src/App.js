@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from './components/loginFlow/Login/Login';
-import AddUser from './components/loginFlow/AddUser/AddUser';
+import Login from './components/loginComponents/Login/Login';
+import AddUser from './components/loginComponents/AddUser/AddUser';
 
-import Dashboard from './components/dashboardFlow/Dashboard/Dashboard';
-import Profile from './components/profileFlow/Profile/Profile';
-import AddActivity from './components/activityFlow/AddActivity/AddActivity';
+import Dashboard from './components/dashboardComponents/Dashboard/Dashboard';
+import Profile from './components/profileComponents/Profile/Profile';
+import AddActivity from './components/addActivityComponents/AddActivity/AddActivity';
 import Stats from './Stats/Stats';
 import Activities from './components/activityListComponents/Activities/Activities';
 
@@ -39,7 +39,7 @@ function App() {
     <BrowserRouter>
         <div>
             <TitleBar heading={heading}/>
-            <ProfileBar setModal={setModal}/>
+            {/* <ProfileBar setModal={setModal}/> */}
             {/* <ProfileModal modal={modal}/> */}
             <NavBar />
             <Routes>
