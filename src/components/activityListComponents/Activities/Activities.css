@@ -3,7 +3,7 @@
     min-height: 100px;
     margin: 0 1rem;
     background-color: var(--main-bg-color);
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     padding-bottom: 6rem;
     display: grid;
     grid-template-columns: 1fr 1fr;

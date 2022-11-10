@@ -9,6 +9,10 @@
     gap: 2rem;
 }
 
+.name {
+    font-size: 30px;
+}
+
 .image-wrapper {
     height: 160px;
     width: 160px;

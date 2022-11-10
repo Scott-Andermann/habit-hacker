@@ -1,9 +1,9 @@
 .activity-card {
     height: 167px;
+    height: clamp(150px, 30vw, 180px);
     width: 100%;
     background-color: var(--second-bg-color);
     border-radius: 15px;
-    margin-top: 0.25rem;
     padding: 1rem;
     padding-bottom: 2.5rem;
     transition: height 0.5s ease;
@@ -11,9 +11,25 @@
     color: white;
 }
 
+
+.open {
+    height: 260px;
+}
+
+.activity-card h2 {
+    font-size: clamp(15px, 4vw, 2em)
+}
+.activity-card h3 {
+    font-size: clamp(12px, 3.2vw, 1.3em)
+}
+.activity-card h4{
+    font-size: clamp(12px, 2.5vw, 1.3em)
+}
+
+
 .card-contents {
     display: flex;
-    gap: 3rem;
+    gap: clamp(1rem, 2.25vw, 3rem);
     justify-content: space-between;
     margin: 0.5rem 0;
 }
@@ -42,14 +58,8 @@
     color: white;
 }
 
-
-.open {
-    height: auto;
-    max-height: 300px;
-}
-
 section {
-    height: 62px;
+    height: 120px;
     overflow: scroll;
     transform-origin: top;
     transition: transform 0.5s ease;

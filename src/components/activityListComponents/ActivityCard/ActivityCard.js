@@ -52,23 +52,23 @@ const ActivityCard = ({data}) => {
     }
 
     return ( 
-        <div className={open ? 'open activity-card' : 'activity-card'} style={{
-            height: open ? '233px' : '167px'
-        }}>
+        <div className={open ? 'open activity-card' : 'activity-card'} 
+        // style={{height: open ? '233px' : ''}}
+        >
             <p>{buildDate(data.date_field)}</p>
             <h2>{data.title}</h2>
             <div className='card-contents'>
                 <ActivityType actType={data.actType} />
                 {/* <FontAwesomeIcon icon={faPersonWalking} size='3x' /> */}
                 <div className='card-details'>
-                    <h4>Points: {data.points}</h4>
+                    <h4>{`Points: ${data.points}`}</h4>
                     <h4>Streak: 2</h4>
                 </div>
             </div>
             <section style={{transform: open ? 'scaleY(1)' : 'scaleY(0)'}}>
                 <div className='open-card-details'>
-                    {data.duration > 0 && <h4>{buildDuration(data.duration)}</h4>}
-                    {data.mileage > 0 && <h4>{data.mileage}mi</h4>}
+                    {data.duration > 0 && <h3>{buildDuration(data.duration)}</h3>}
+                    {data.mileage > 0 && <h3>{data.mileage}mi</h3>}
                 </div>
                 <p>{data.actDescription}</p>
             </section>
