@@ -1,20 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './ActivityCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPersonWalking, faCaretDown, faPersonRunning} from '@fortawesome/free-solid-svg-icons';
-
-// const data = {
-//     "id": 3,
-//     "userId": 2,
-//     "date_field": "2022-10-06T00:00:00.000Z",
-//     "actType": "walk",
-//     "title": "walking around",
-//     "actDescription": "great",
-//     "duration": 24001,
-//     "mileage": 4,
-//     "points": 2,
-//     "externalLink": "https://www.strava.com/activities/8084505727"
-// }
+import { faPersonWalking, faCaretDown, faPersonRunning, faDog, faBook, faBan, faBriefcase, faSpa} from '@fortawesome/free-solid-svg-icons';
 
 const ActivityCard = ({data}) => {
 
@@ -29,6 +16,23 @@ const ActivityCard = ({data}) => {
             case 'run':
                 icon = faPersonRunning;
                 break;
+            case 'dogWalk':
+                icon = faDog;
+                break;
+            case 'reading':
+                icon = faBook;
+                break;
+            case 'yoga':
+                icon = faSpa;
+                break;
+            case 'noWork':
+                return (
+                    <div className='no-work'>
+                        <FontAwesomeIcon className='no-work-icon briefcase' icon={faBriefcase} size='2x' />
+                        <FontAwesomeIcon className='no-work-icon ban' icon={faBan} size='3x' />
+                    </div>
+                )
+                break;
         }
         return (
             <FontAwesomeIcon icon={icon} size='3x'/>
@@ -40,29 +44,38 @@ const ActivityCard = ({data}) => {
         return newDate.toISOString().split('T')[0];
     }
 
+    const buildDuration = (seconds) => {
+        if (seconds < 3600) {
+            return `${Math.floor((data.duration / 60) % 60)}m${data.duration % 60}s`;
+        }
+        return `${Math.floor(data.duration/3600)}h${Math.floor((data.duration / 60) % 60)}m${data.duration % 60}s`;
+    }
+
     return ( 
-        <div className={open ? 'open activity-card' : 'activity-card'}>
+        <div className={open ? 'open activity-card' : 'activity-card'} style={{
+            height: open ? '233px' : '167px'
+        }}>
             <p>{buildDate(data.date_field)}</p>
             <h2>{data.title}</h2>
             <div className='card-contents'>
                 <ActivityType actType={data.actType} />
                 {/* <FontAwesomeIcon icon={faPersonWalking} size='3x' /> */}
                 <div className='card-details'>
-                    <p>Points: 2</p>
-                    <p>Streak: 2</p>
+                    <h4>Points: {data.points}</h4>
+                    <h4>Streak: 2</h4>
                 </div>
             </div>
-            {open && <div>
+            <section style={{transform: open ? 'scaleY(1)' : 'scaleY(0)'}}>
                 <div className='open-card-details'>
-                    <p>30h1m</p>
-                    <p>3.04mi</p>
+                    {data.duration > 0 && <h4>{buildDuration(data.duration)}</h4>}
+                    {data.mileage > 0 && <h4>{data.mileage}mi</h4>}
                 </div>
                 <p>{data.actDescription}</p>
-            </div>}
-            <button className='show-more' onClick={() => setOpen(prev => !prev)}>
+            </section>
+            {(data.mileage > 0 || data.duration > 0 || data.actDescription !== '') && <button className='show-more' onClick={() => setOpen(prev => !prev)}>
                 <FontAwesomeIcon icon={faCaretDown} rotation={open ? 180 : 0} />
                 <p>{open ? 'less' : 'more'}</p>
-            </button>
+            </button>}
         </div>
      );
 }

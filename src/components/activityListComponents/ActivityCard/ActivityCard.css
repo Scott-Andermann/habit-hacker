@@ -2,12 +2,11 @@
     height: 167px;
     width: 100%;
     background-color: var(--second-bg-color);
-    border-radius: 5px;
+    border-radius: 15px;
     margin-top: 0.25rem;
     padding: 1rem;
     padding-bottom: 2.5rem;
     transition: height 0.5s ease;
-    border: 2px solid gray;
     position: relative;
     color: white;
 }
@@ -43,15 +42,46 @@
     color: white;
 }
 
+
 .open {
     height: auto;
-    /* min-height: 18rem; */
+    max-height: 300px;
+}
+
+section {
+    height: 62px;
+    overflow: scroll;
+    transform-origin: top;
+    transition: transform 0.5s ease;
+}
+
+section p {
+    font-size: 12px;
 }
 
 .open-card-details {
     display: flex;
     gap: 1rem;
     margin: 0.5rem 0;
-
 }
 
+.card-see-more {
+    height: auto;
+    transform: scaleY(1);
+    overflow: hidden;
+}
+
+.no-work {
+    position: relative;
+}
+
+.briefcase {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    opacity: 0.5
+}
+
+.ban {
+    color: red;
+}
